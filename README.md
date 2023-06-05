@@ -22,8 +22,8 @@ Before running this project, make sure you have the following installed on your 
 4. Create a `.env` file in the root directory and provide the following environment variables:
 
    ```
-   PORT=3000
-   MONGODB_URI=<your_mongodb_uri>
+   PORT=8080
+   MONGOOSE_URI=<your_mongodb_uri>
    ```
 
    Replace `<your_mongodb_uri>` with the connection URI for your MongoDB database.
@@ -34,7 +34,7 @@ Before running this project, make sure you have the following installed on your 
    npm start
    ```
 
-   This will start the server at `http://localhost:3000`.
+   This will start the server at `http://localhost:8080`.
 
 ## API Endpoints
 
