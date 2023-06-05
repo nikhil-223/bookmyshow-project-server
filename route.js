@@ -4,14 +4,18 @@ const bookMovieSchema = require("./schema");
 
 // Creating new booking and adding it to database.
 router.post("/booking", async (req, res) => {
-	const { movie, slot, seats } = req.body;
-
-	const myBooking = new bookMovieSchema({ movie, slot, seats });
+	const myBooking = new bookMovieSchema({
+		movie: req.body.movie,
+		slot: req.body.slot,
+		seats: req.body.seats,
+	});
 	const savedBooking = await myBooking.save();
 
 	if (savedBooking) {
 		//on successfull
-		res.status(200).json({ data: myBooking, message: "Booking successful!" });
+		res
+			.status(200)
+			.json({ data: savedBooking, message: "Booking successful!" });
 	} else {
 		//on error
 		res.status(500).json({
