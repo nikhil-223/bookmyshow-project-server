@@ -2,7 +2,7 @@
 const bodyParser = require("body-parser");
 
 //3rd party module
-const connectToDB = require('./connector')
+const connectToDB = require('./database/connection')
 const express = require("express");
 const cors = require("cors");
 
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 
 //api routes
-app.use("/api", require("./route"));
+app.use("/api", require("./routes/route"));
 
 app.listen(port, () => console.log(`App listening on port http://localhost:${port}`));
 

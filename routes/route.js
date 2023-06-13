@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const bookMovieSchema = require("./schema");
+const bookMovieSchema = require("../models/Schema");
 
 // Creating new booking and adding it to database.
 router.post("/booking", async (req, res) => {
